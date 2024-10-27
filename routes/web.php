@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/wira', action: function () {
     return view('test');
 });
+
+Route::get('/mahasiswa', [App\Http\Controllers\MahasiswaController::class, 'view']);
