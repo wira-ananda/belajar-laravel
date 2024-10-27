@@ -1,0 +1,27 @@
+<?php
+
+// Menggunakan namespace untuk menghindari konflik nama
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+// Membuat dan mengonfigurasi PHP-CS-Fixer
+return Config::create()
+    ->setRules([
+        '@PSR2' => true, // Menggunakan standar PSR-2
+        'binary_operator_spaces' => [
+            'default' => 'align_single_space_minimal',
+        ],
+        'array_syntax' => [
+            'syntax' => 'short', // Menggunakan sintaksis array pendek
+        ],
+        'indentation_type' => true, // Mengatur indentasi
+        'no_empty_statement' => true, // Menghapus pernyataan kosong
+        // Tambahkan aturan lainnya sesuai kebutuhan
+    ])
+    ->setFinder(
+        Finder::create()
+            ->in(__DIR__) // Mencari di dalam direktori saat ini
+            ->exclude('vendor') // Mengecualikan direktori vendor
+            ->name('*.php') // Mencari hanya file PHP
+            ->name('*.blade.php') // Mencari file Blade
+    );

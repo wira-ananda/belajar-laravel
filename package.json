@@ -1,0 +1,17 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "prettier": "prettier --write \"resources/**/*.js\" \"resources/**/*.css\"",
+    "fix": "vendor/bin/php-cs-fixer fix",
+    "format": "npm run prettier && npm run fix"
+    },
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0.0",
+        "prettier": "^3.3.3",
+        "vite": "^5.0.0"
+    }
+}
