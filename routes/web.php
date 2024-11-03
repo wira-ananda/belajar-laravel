@@ -22,3 +22,7 @@ Route::get('/wira', action: function () {
 });
 
 Route::get('/mahasiswa', [App\Http\Controllers\MahasiswaController::class, 'view']);
+
+Route::get('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'create']);
+
+Route::post('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'store']);
