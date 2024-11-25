@@ -26,3 +26,9 @@ Route::get('/mahasiswa', [App\Http\Controllers\MahasiswaController::class, 'view
 Route::get('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'create']);
 
 Route::post('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'store']);
+
+Route::get('/mahasiswa/{nim}/edit', [App\Http\Controllers\MahasiswaController::class, 'edit']);
+
+Route::post('/mahasiswa/edit', [App\Http\Controllers\MahasiswaController::class, 'update']);
+
+Route::get('/mahasiswa/{nim}/delete', [App\Http\Controllers\MahasiswaController::class, 'destroy']);

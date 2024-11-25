@@ -18,8 +18,8 @@
       <td>{{ $mahasiswa->alamat }}</td>
       <td>{{ $mahasiswa->kodejurusan }}</td>
       <td>
-        <a href="{{ url('demo') . '/' . $mahasiswa->nim . '/edit' }}">Edit</a>&nbsp;&nbsp;&nbsp;
-        <a href="{{ url('demo') . '/' . $mahasiswa->nim . '/hapus' }}">Hapus</a>
+        <a href="{{ url('mahasiswa') . '/' . $mahasiswa->nim . '/edit' }}">Edit</a>&nbsp;&nbsp;&nbsp;
+        <a href="{{ url('mahasiswa') . '/' . $mahasiswa->nim . '/delete' }}">Hapus</a>
       </td>
     </tr>
     @endforeach

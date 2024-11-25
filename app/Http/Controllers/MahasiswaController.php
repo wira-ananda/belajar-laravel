@@ -28,4 +28,26 @@ class MahasiswaController extends Controller
         $mahasiswa->save();
         return redirect('mahasiswa');
     }
+
+    public function edit(Request $request)
+    {
+        $mahasiswa = Mahasiswa::find($request->nim);
+        return view('view_viewmahasiswa', compact('mahasiswa'));
+    }
+
+    public function update(Request $request)
+    {
+        $mahasiswa = Mahasiswa::find($request->nim);
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->alamat = $request->alamat;
+        $mahasiswa->kodejurusan = $request->kodejurusan;
+        $mahasiswa->save();
+        return redirect('mahasiswa');
+    }
+    public function destroy($nim)
+    {
+        $mahasiswa = Mahasiswa::find($nim);
+        $mahasiswa->delete();
+        return redirect('mahasiswa');
+    }
 }
