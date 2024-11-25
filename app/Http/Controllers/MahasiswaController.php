@@ -10,12 +10,12 @@ class MahasiswaController extends Controller
     public function view()
     {
         $mahasiswas = Mahasiswa::all();
-        return view('mahasiswa', compact('mahasiswas'));
+        return view('view_mahasiswa', compact('mahasiswas'));
     }
 
     public function create()
     {
-        return view('inputmahasiswa');
+        return view('view_inputmahasiswa');
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class MahasiswaController extends Controller
     public function edit(Request $request)
     {
         $mahasiswa = Mahasiswa::find($request->nim);
-        return view('view_viewmahasiswa', compact('mahasiswa'));
+        return view('view_editmahasiswa', compact('mahasiswa'));
     }
 
     public function update(Request $request)
